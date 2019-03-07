@@ -14,11 +14,11 @@ try {
         
         }
         stage('Build docker image') {
-            sh "docker build -t ckbosire_docker-exam:latest ."
+            sh "docker build -t ckbosire_docker_exam:latest ."
         }
         stage('Docker login to hub and push the image') {
             sh "docker login -u 'ckbosire' -p 'Bonaventure2019!' "
-            sh "docker tag ckbosire_docker-exam:latest ckbosire/docker-exam:latest"
+            sh "docker tag ckbosire_docker_exam:latest ckbosire/docker-exam:latest"
             sh "docker push ckbosire/docker-exam:latest"
         }
         stage('Apply changes to the environment'){
