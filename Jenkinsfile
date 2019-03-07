@@ -14,7 +14,7 @@ try {
         
         }
         stage('Build docker image') {
-            sh "docker build -t ckbosire_docker_exam:latest ."
+            sh "docker build -t ckbosire_docker_exam:latest . "
         }
         stage('Docker login to hub and push the image') {
             sh "docker login -u 'ckbosire' -p 'Bonaventure2019!' "
